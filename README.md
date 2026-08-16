@@ -1,23 +1,16 @@
 # 🎓 Student Performance Predictor
 
-
 <p align="center">
-
 
 **Machine Learning powered academic performance prediction**
 
-
 Predict a student's final academic score using academic and lifestyle features.
-
 
 Built with **Python • Scikit-Learn • Streamlit**
 
-
 </p>
 
-
 <p align="center">
-
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
@@ -25,33 +18,23 @@ Built with **Python • Scikit-Learn • Streamlit**
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Science-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-Data%20Processing-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
-
 </p>
 
-
 ---
-
 
 ## 🚀 Overview
 
-
 **Student Performance Predictor** is a Machine Learning regression project designed to estimate a student's final academic score from academic and lifestyle-related factors.
-
 
 The project follows a complete ML workflow:
 
-
 **Data Generation → Data Analysis → Model Training → Model Evaluation → Prediction → Streamlit Deployment**
-
 
 The application provides an interactive dashboard where users can enter student information and receive an estimated final score.
 
-
 ---
 
-
 ## ✨ Features
-
 
 - 📊 Synthetic dataset containing **1,000 student records**
 - 🔍 Exploratory Data Analysis
@@ -64,12 +47,9 @@ The application provides an interactive dashboard where users can enter student 
 - 💾 Trained model saved using Joblib
 - 📱 Clean and responsive dark-themed UI
 
-
 ---
 
-
 ## 📌 Model Results
-
 
 | Metric | Result |
 |---|---:|
@@ -78,18 +58,13 @@ The application provides an interactive dashboard where users can enter student 
 | RMSE | **3.69** |
 | R² Score | **87.85%** |
 
-
-The Linear Regression model achieved the best overall performance among the tested models.
-
+The **Linear Regression** model achieved the best overall performance among the tested models.
 
 ---
 
-
 ## 🧠 Machine Learning Models
 
-
 Three regression algorithms were evaluated:
-
 
 | Model | MAE | RMSE | R² |
 |---|---:|---:|---:|
@@ -97,43 +72,44 @@ Three regression algorithms were evaluated:
 | Random Forest | 3.53 | 4.44 | 0.8244 |
 | Decision Tree | 4.92 | 6.07 | 0.6719 |
 
-
 ### 🏆 Selected Model
 
-
 **Linear Regression**
-
-
-It achieved:
-
 
 - **MAE:** 2.91
 - **RMSE:** 3.69
 - **R²:** 0.8785
 
-
 ---
 
+## 📊 Input Features
+
+The model uses six features:
+
+| Feature | Description |
+|---|---|
+| `study_hours` | Average daily study hours |
+| `attendance` | Attendance percentage |
+| `previous_score` | Previous examination score |
+| `sleep_hours` | Average daily sleep |
+| `assignment_completion` | Assignment completion percentage |
+| `extracurricular` | Participation in extracurricular activities |
+
+### 🎯 Target
+
+```text
+final_score
 The predicted score is constrained to a range of 0–100 in the application.
 
 🛠️ Tech Stack
-Programming
-Python
-Data Science
-Pandas
-NumPy
-Machine Learning
-Scikit-Learn
-Linear Regression
-Decision Tree
-Random Forest
-Visualization
-Matplotlib
-Seaborn
-Model Persistence
-Joblib
-Application
-Streamlit
+Category	Technologies
+Programming	Python
+Data Science	Pandas, NumPy
+Machine Learning	Scikit-Learn
+Models	Linear Regression, Decision Tree, Random Forest
+Visualization	Matplotlib, Seaborn
+Model Persistence	Joblib
+Application	Streamlit
 📁 Project Structure
 STUDENT-PERFORMANCE-ML/
 │
@@ -153,6 +129,9 @@ STUDENT-PERFORMANCE-ML/
 ├── src/
 │   └── predict.py
 │
+├── screenshots/
+│   └── dashboard.png
+│
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -163,9 +142,13 @@ cd Student-Performance-ML
 2. Create a virtual environment
 python -m venv venv
 3. Activate the environment
-Windows
+
+Windows:
+
 venv\Scripts\activate
-macOS / Linux
+
+macOS / Linux:
+
 source venv/bin/activate
 4. Install dependencies
 pip install -r requirements.txt
@@ -182,12 +165,12 @@ http://localhost:8501
 
 The Streamlit dashboard allows users to enter:
 
-Daily study hours
-Attendance
-Previous exam score
-Sleep hours
-Assignment completion
-Extracurricular participation
+📚 Daily study hours
+📈 Attendance
+📝 Previous exam score
+😴 Sleep hours
+📚 Assignment completion
+🏆 Extracurricular participation
 
 After clicking Analyze Performance, the application displays:
 
@@ -198,57 +181,26 @@ After clicking Analyze Performance, the application displays:
 📉 RMSE
 📌 R² score
 🔍 Prediction input summary
-Screenshot
-
-Add your application screenshot to:
-
-screenshots/dashboard.png
-
-Then uncomment/add:
-
-<p align="center">
-  <img src="screenshots/dashboard.png" width="900">
-</p>
+Dashboard
+<p align="center"> <img src="screenshots/dashboard.png" width="900"> </p>
 🔬 Machine Learning Workflow
-                    ┌─────────────────────┐
-                    │   Generate Dataset   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │  Data Exploration   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Feature Preparation │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-              ┌─────────────────────────────────┐
-              │      Train Regression Models    │
-              │                                 │
-              │  Linear Regression              │
-              │  Decision Tree                  │
-              │  Random Forest                  │
-              └────────────────┬────────────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Model Evaluation    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Select Best Model   │
-                    │ Linear Regression   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Streamlit Predictor │
-                    └─────────────────────┘
-📈 Evaluation Metrics
+flowchart TD
+    A[📊 Generate Dataset] --> B[🔍 Data Exploration]
+    B --> C[🧹 Data Preparation]
+    C --> D[🤖 Train Regression Models]
+
+    D --> E[Linear Regression]
+    D --> F[Decision Tree]
+    D --> G[Random Forest]
+
+    E --> H[📈 Model Evaluation]
+    F --> H
+    G --> H
+
+    H --> I[🏆 Select Best Model]
+    I --> J[🎯 Student Score Prediction]
+    J --> K[🖥️ Streamlit Dashboard]
+    📈 Evaluation Metrics
 MAE — Mean Absolute Error
 
 Measures the average absolute difference between predicted and actual scores.
@@ -267,23 +219,22 @@ Measures how well the model explains the variation in the target variable.
 
 Higher is better.
 
-The selected Linear Regression model achieved:
-
+Final Model Performance
 MAE  → 2.91
 RMSE → 3.69
 R²   → 0.8785
-💡 Example
+💡 Example Prediction
 
 Example student profile:
 
-Study Hours           → 5.0
-Attendance            → 75%
-Previous Score        → 65
-Sleep Hours           → 7.0
-Assignment Completion → 70%
-Extracurricular       → No
+Study Hours            → 5.0
+Attendance             → 75%
+Previous Score         → 65
+Sleep Hours            → 7.0
+Assignment Completion  → 70%
+Extracurricular        → No
 
-The model then generates an estimated final score based on these features.
+The model generates an estimated final score based on these features.
 
 🔮 Future Improvements
 🌐 Deploy the application online
@@ -298,7 +249,7 @@ The model then generates an estimated final score based on these features.
 
 This project is intended for educational and demonstration purposes.
 
-The dataset is synthetic and the predictions should not be used for real-world academic decision-making.
+The dataset is synthetic and predictions should not be used for real-world academic decision-making.
 
 👨‍💻 Author
 Mohammed Shahed Afrid Khan
