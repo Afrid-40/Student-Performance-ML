@@ -99,18 +99,29 @@ The model uses six features:
 
 ```text
 final_score
-The predicted score is constrained to a range of 0–100 in the application.
+```
 
-🛠️ Tech Stack
-Category	Technologies
-Programming	Python
-Data Science	Pandas, NumPy
-Machine Learning	Scikit-Learn
-Models	Linear Regression, Decision Tree, Random Forest
-Visualization	Matplotlib, Seaborn
-Model Persistence	Joblib
-Application	Streamlit
-📁 Project Structure
+The predicted score is constrained to a range of **0–100** in the application.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Data Science | Pandas, NumPy |
+| Machine Learning | Scikit-Learn |
+| Models | Linear Regression, Decision Tree, Random Forest |
+| Visualization | Matplotlib, Seaborn |
+| Model Persistence | Joblib |
+| Application | Streamlit |
+
+---
+
+## 📁 Project Structure
+
+```text
 STUDENT-PERFORMANCE-ML/
 │
 ├── app/
@@ -135,55 +146,95 @@ STUDENT-PERFORMANCE-ML/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-⚙️ Installation
-1. Clone the repository
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/shahedkhanin-dev/Student-Performance-ML.git
 cd Student-Performance-ML
-2. Create a virtual environment
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv venv
-3. Activate the environment
+```
 
-Windows:
+### 3. Activate the environment
 
+**Windows:**
+
+```powershell
 venv\Scripts\activate
+```
 
-macOS / Linux:
+**macOS / Linux:**
 
+```bash
 source venv/bin/activate
-4. Install dependencies
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ Run the Application
+```
+
+---
+
+## ▶️ Run the Application
 
 Start the Streamlit application:
 
+```bash
 streamlit run app/app.py
+```
 
 The application will open at:
 
+```text
 http://localhost:8501
-🖥️ Application
+```
+
+---
+
+## 🖥️ Application
 
 The Streamlit dashboard allows users to enter:
 
-📚 Daily study hours
-📈 Attendance
-📝 Previous exam score
-😴 Sleep hours
-📚 Assignment completion
-🏆 Extracurricular participation
+- 📚 Daily study hours
+- 📈 Attendance
+- 📝 Previous exam score
+- 😴 Sleep hours
+- 📚 Assignment completion
+- 🏆 Extracurricular participation
 
-After clicking Analyze Performance, the application displays:
+After clicking **Analyze Performance**, the application displays:
 
-🎯 Predicted final score
-📊 Performance status
-🧠 Model information
-📈 MAE
-📉 RMSE
-📌 R² score
-🔍 Prediction input summary
-Dashboard
-<p align="center"> <img src="screenshots/dashboard.png" width="900"> </p>
-🔬 Machine Learning Workflow
+- 🎯 Predicted final score
+- 📊 Performance status
+- 🧠 Model information
+- 📈 MAE
+- 📉 RMSE
+- 📌 R² score
+- 🔍 Prediction input summary
+
+### Dashboard
+
+<p align="center">
+  <img src="screenshots/dashboard.png" width="900">
+</p>
+
+---
+
+## 🔬 Machine Learning Workflow
+
+```mermaid
 flowchart TD
     A[📊 Generate Dataset] --> B[🔍 Data Exploration]
     B --> C[🧹 Data Preparation]
@@ -200,71 +251,95 @@ flowchart TD
     H --> I[🏆 Select Best Model]
     I --> J[🎯 Student Score Prediction]
     J --> K[🖥️ Streamlit Dashboard]
-    📈 Evaluation Metrics
-MAE — Mean Absolute Error
+```
+
+---
+
+## 📈 Evaluation Metrics
+
+### MAE — Mean Absolute Error
 
 Measures the average absolute difference between predicted and actual scores.
 
-Lower is better.
+**Lower is better.**
 
-RMSE — Root Mean Squared Error
+### RMSE — Root Mean Squared Error
 
 Measures prediction error while giving greater weight to larger errors.
 
-Lower is better.
+**Lower is better.**
 
-R² — Coefficient of Determination
+### R² — Coefficient of Determination
 
 Measures how well the model explains the variation in the target variable.
 
-Higher is better.
+**Higher is better.**
 
-Final Model Performance
+### Final Model Performance
+
+```text
 MAE  → 2.91
 RMSE → 3.69
 R²   → 0.8785
-💡 Example Prediction
+```
+
+---
+
+## 💡 Example Prediction
 
 Example student profile:
 
+```text
 Study Hours            → 5.0
 Attendance             → 75%
 Previous Score         → 65
 Sleep Hours            → 7.0
 Assignment Completion  → 70%
 Extracurricular        → No
+```
 
 The model generates an estimated final score based on these features.
 
-🔮 Future Improvements
-🌐 Deploy the application online
-📊 Add interactive performance visualizations
-🔎 Add model explainability
-📚 Train using larger real-world datasets
-🤖 Experiment with additional regression algorithms
-📈 Add personalized improvement recommendations
-🔐 Add user authentication
-📱 Improve mobile responsiveness
-⚠️ Disclaimer
+---
 
-This project is intended for educational and demonstration purposes.
+## 🔮 Future Improvements
+
+- 🌐 Deploy the application online
+- 📊 Add interactive performance visualizations
+- 🔎 Add model explainability
+- 📚 Train using larger real-world datasets
+- 🤖 Experiment with additional regression algorithms
+- 📈 Add personalized improvement recommendations
+- 🔐 Add user authentication
+- 📱 Improve mobile responsiveness
+
+---
+
+## ⚠️ Disclaimer
+
+This project is intended for **educational and demonstration purposes**.
 
 The dataset is synthetic and predictions should not be used for real-world academic decision-making.
 
-👨‍💻 Author
-Mohammed Shahed Afrid Khan
+---
 
-Machine Learning • Artificial Intelligence • Python • Data Science
+## 👨‍💻 Author
 
-GitHub:
+### Mohammed Shahed Afrid Khan
+
+**Machine Learning • Artificial Intelligence • Python • Data Science**
+
+GitHub:  
 https://github.com/shahedkhanin-dev
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If you found this project useful or interesting, consider giving the repository a ⭐.
 
 <p align="center">
 
-Built with Python, Scikit-Learn & Streamlit
+**Built with Python, Scikit-Learn & Streamlit**
 
-</p> ```
+</p>
