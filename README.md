@@ -155,7 +155,7 @@ STUDENT-PERFORMANCE-ML/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/shahedkhanin-dev/Student-Performance-ML.git
+git clone  https://github.com/Afrid-40/Student-Performance-ML.git
 cd Student-Performance-ML
 ```
 
