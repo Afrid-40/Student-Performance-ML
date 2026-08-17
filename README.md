@@ -330,7 +330,7 @@ The dataset is synthetic and predictions should not be used for real-world acade
 **Machine Learning • Artificial Intelligence • Python • Data Science**
 
 GitHub:  
-https://github.com/shahedkhanin-dev
+https://github.com/Afrid-40
 
 ---
 
